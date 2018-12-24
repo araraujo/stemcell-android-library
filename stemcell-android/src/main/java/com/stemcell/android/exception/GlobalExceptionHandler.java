@@ -10,10 +10,6 @@ import com.stemcell.android.base.ProgressApp;
 import com.stemcell.android.service.ErrorMessageService;
 
 
-/**
- * Created by melti on 04/07/15.
- */
-
 public class GlobalExceptionHandler implements Thread.UncaughtExceptionHandler {
 
     private static final String TAG = "GlobalExceptionHandler";

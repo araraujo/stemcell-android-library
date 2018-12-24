@@ -5,9 +5,6 @@ import com.google.android.gms.iid.InstanceIDListenerService;
 
 import com.stemcell.android.base.BaseApp;
 
-/**
- * Created by spassu on 09/08/15.
- */
 public class LocalInstanceIDListenerService extends InstanceIDListenerService {
 
     private static final String TAG = "InstanceIDLS";

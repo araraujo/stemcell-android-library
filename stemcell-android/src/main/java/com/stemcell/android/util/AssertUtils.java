@@ -5,9 +5,6 @@ import java.util.Collection;
 import com.stemcell.android.exception.BusinessException;
 
 public abstract class AssertUtils {
-    /**
-     * Construtor privado
-     */
     private AssertUtils(){
     }
 

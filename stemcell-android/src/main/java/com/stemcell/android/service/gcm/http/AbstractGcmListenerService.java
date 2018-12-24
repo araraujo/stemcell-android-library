@@ -13,9 +13,6 @@ import com.google.android.gms.gcm.GcmListenerService;
 import com.stemcell.android.R;
 import com.stemcell.android.base.BaseApp;
 
-/**
- * Created by spassu on 09/08/15.
- */
 public abstract class AbstractGcmListenerService extends GcmListenerService {
     private static final String TAG = "GcmListenerService";
 

@@ -13,10 +13,6 @@ import java.io.StringWriter;
 
 import com.stemcell.android.exception.BusinessException;
 
-/**
- * Created by melti on 05/07/15.
- */
-
 public class HttpInterceptor implements Interceptor {
 
 
@@ -29,7 +25,7 @@ public class HttpInterceptor implements Interceptor {
         try {
             response = chain.proceed(request);
         } catch (Exception e) {
-            throw new BusinessException("A comunicação com o servidor falhou. Verifique sua conexão com a internet.");
+            throw new BusinessException("The communication with the server failed. Check your internet connection.");
         }
 
         if (!response.isSuccessful()) {

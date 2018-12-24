@@ -8,9 +8,6 @@ import java.io.IOException;
 import com.stemcell.android.base.ProgressApp;
 
 
-/**
- * Created by melti on 05/07/15.
- */
 public abstract class BaseCallback implements Callback {
 
     @Override

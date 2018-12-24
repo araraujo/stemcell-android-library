@@ -6,9 +6,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
 
-/**
- * Created by melti on 04/07/15.
- */
 public class ErrorMessageService extends IntentService {
 
     private static final String TAG = "ErrorMessageService";

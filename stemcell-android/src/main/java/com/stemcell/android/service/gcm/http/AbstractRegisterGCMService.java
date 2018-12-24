@@ -14,9 +14,6 @@ import com.stemcell.android.base.BaseApp;
 import com.stemcell.android.exception.GcmRegistrationException;
 import com.stemcell.android.util.Constants;
 
-/**
- * Created by spassu on 08/08/15.
- */
 public abstract class AbstractRegisterGCMService extends IntentService {
 
     private static final String TAG = "RegisterGCMService";

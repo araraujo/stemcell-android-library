@@ -22,10 +22,6 @@ import com.stemcell.android.beans.HttpMultipartBean;
 import com.stemcell.android.interceptor.HttpInterceptor;
 import okio.ByteString;
 
-/**
- * Created by spassu on 01/07/15.
- */
-
 public class ResourceTool {
 
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
