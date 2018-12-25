@@ -28,12 +28,12 @@ public class GalleryCamera {
     public static final int REQUEST_CAMERA = 1;
     public static final int SELECT_FILE = 2;
 
-    private static final CharSequence[] items = { "Tirar foto", "Escolher da galeria", "Cancelar" };
+    private static final CharSequence[] items = { "Take a picture", "Choose from gallery", "Cancel" };
 
 
     public static void selectImage(Activity context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("Selecionar imagem");
+        builder.setTitle("Select image");
         DialogInterfaceImage dialog = new DialogInterfaceImage(context);
         builder.setItems(items, dialog);
         builder.show();
@@ -41,7 +41,7 @@ public class GalleryCamera {
 
     public static void selectImage(Fragment context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context.getActivity());
-        builder.setTitle("Selecionar imagem");
+        builder.setTitle("Select image");
         DialogInterfaceImage dialog = new DialogInterfaceImage(context);
         builder.setItems(items, dialog);
         builder.show();
@@ -135,12 +135,12 @@ public class GalleryCamera {
                 intent.setType("image/*");
 
                 if (activity != null) {
-                    activity.startActivityForResult(Intent.createChooser(intent, "Selecione uma imagem"), SELECT_FILE);
+                    activity.startActivityForResult(Intent.createChooser(intent, "Select an image"), SELECT_FILE);
                 } else {
-                    fragment.startActivityForResult(Intent.createChooser(intent, "Selecione uma imagem"), SELECT_FILE);
+                    fragment.startActivityForResult(Intent.createChooser(intent, "Select an image"), SELECT_FILE);
                 }
 
-            } else if (items[item].equals("Cancelar")) {
+            } else if (items[item].equals("Cancel")) {
                 dialog.dismiss();
             }
         }

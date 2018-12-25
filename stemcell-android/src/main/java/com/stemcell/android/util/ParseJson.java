@@ -17,9 +17,6 @@ import com.stemcell.android.serializer.DateDeserializer;
 import com.stemcell.android.serializer.EnumDeserializer;
 
 
-/**
- * Created by melti on 03/07/15.
- */
 public class ParseJson<E> {
 
     private GsonBuilder gsonBuilder;

@@ -12,7 +12,7 @@ import com.stemcell.android.beans.LocalCredentialsBean;
 
 
 /**
- * Created by spassu on 14/07/15.
+ *
  *
  * Saving user credentials on successful login case
  * PrefUtils.saveToPrefs(YourActivity.this, PREFS_LOGIN_USERNAME_KEY, username);
@@ -92,10 +92,10 @@ public class PrefUtils {
     public static void saveCredentials(Context context, LocalCredentialsBean credentials) {
         saveLongToPrefs(context, PREFS_CREDENTIALS_ID_KEY, credentials.getId());
         saveToPrefs(context, PREFS_CREDENTIALS_KEY_KEY, credentials.getLogon());
-        saveToPrefs(context, PREFS_CREDENTIALS_PASSWORD_KEY, credentials.getSenha());
+        saveToPrefs(context, PREFS_CREDENTIALS_PASSWORD_KEY, credentials.getPassword());
         saveToPrefs(context, PREFS_CREDENTIALS_EMAIL_KEY, credentials.getEmail());
         saveToPrefs(context, PREFS_CREDENTIALS_NAME_KEY, credentials.getUsername());
-        saveToPrefs(context, PREFS_CREDENTIALS_CONFIRM_KEY, credentials.isConfirmado() ? "S" : "N");
+        saveToPrefs(context, PREFS_CREDENTIALS_CONFIRM_KEY, credentials.isConfirmed() ? "Y" : "N");
     }
 
     public static void removeCredentials(Context context) {
@@ -118,7 +118,7 @@ public class PrefUtils {
         String senha = getFromPrefs(context, PREFS_CREDENTIALS_PASSWORD_KEY, null);
         String chave = getFromPrefs(context, PREFS_CREDENTIALS_KEY_KEY, null);
         String nome =  getFromPrefs(context, PREFS_CREDENTIALS_NAME_KEY, null);
-        boolean confirmado = getFromPrefs(context, PREFS_CREDENTIALS_NAME_KEY, null) == "S" ? true : false;
+        boolean confirmado = getFromPrefs(context, PREFS_CREDENTIALS_NAME_KEY, null) == "Y" ? true : false;
 
         email = email != null && !email.isEmpty()? email : null;
         senha = senha != null && !senha.isEmpty()? senha : null;
@@ -127,10 +127,10 @@ public class PrefUtils {
 
         credentials.setId(id);
         credentials.setEmail(email);
-        credentials.setSenha(senha);
+        credentials.setPassword(senha);
         credentials.setLogon(chave);
         credentials.setUsername(nome);
-        credentials.setConfirmado(confirmado);
+        credentials.setConfirmed(confirmado);
 
         return credentials;
     }

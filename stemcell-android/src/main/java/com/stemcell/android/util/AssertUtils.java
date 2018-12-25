@@ -9,9 +9,9 @@ public abstract class AssertUtils {
     }
 
     /**
-     * Gera uma exceção conhecida se o objeto <b>objeto</b> é nulo
-     * @param object Objeto que deve ser verificado
-     * @param message Id da mensagem de erro
+     * Generates a known exception if object <b> object </ b> is null
+     * @param object Object to be verified
+     * @param message Error Message Id
      */
     public static void assertNotNull(Object object, String message) {
         if (object == null) {
@@ -21,8 +21,8 @@ public abstract class AssertUtils {
 
     /**
      * Gera uma exceção se a String <b>string</b> é nula ou vazia com a mensagem <b>s</b>.
-     * @param string A string que será verificada.
-     * @param message  Id da mensagem de erro
+     * @param string The string that will be checked.
+     * @param message  Error Message Id
      */
     public static void assertNotNullNotEmpty(String string, String message) {
         if (string == null || string.trim().length() == 0) {
@@ -31,9 +31,9 @@ public abstract class AssertUtils {
     }
 
     /**
-     * Gera uma exceção se a Collection <b>collection</b> é nula ou vazia com a mensagem <b>s</b>.
-     * @param collection A collection que será verificada.
-     * @param message Id da mensagem de erro
+     * Generates an exception if Collection <b> collection </ b> is null or empty with <b> s </ b> message.
+     * @param collection A collection that will be verified.
+     * @param message Error Message Id
      */
     public static void assertNotNullNotEmpty(Collection collection, String message) {
         if (collection == null || collection.isEmpty()) {
@@ -42,9 +42,9 @@ public abstract class AssertUtils {
     }
 
     /**
-     * Gera uma exceção se o objeto <b>o</b> é nulo com a mensagem <b>s</b>.
-     * @param expression Condição a ser checada
-     * @param message Id da mensagem de erro
+     * Generates an exception if the <b> object </ b> is null with the message <b> s </ b>.
+     * @param expression Condition to be checked
+     * @param message Error Message Id
      */
     public static void assertExpression(boolean expression, String message) {
         if (!expression) {
@@ -53,10 +53,10 @@ public abstract class AssertUtils {
     }
 
     /**
-     * Gera uma exceção se o objeto <b>o</b> é nulo com a mensagem <b>s</b>.
-     * @param expression Condição a ser checada
-     * @param message Id da mensagem de erro
-     * @param params Parâmetros da mensagem
+     * Generates an exception if the <b> object </ b> is null with the message <b> s </ b>.
+     * @param expression Condition to be checked
+     * @param message Error Message Id
+     * @param params Message Parameters
      */
     public static void assertExpression(boolean expression, String message, Object... params) {
         if (!expression) {
