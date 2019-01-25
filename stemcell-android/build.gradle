@@ -1,21 +1,19 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group 'com.stemcell.android'
 version '1.0.0'
 
-
 android {
     compileSdkVersion 28
-    buildToolsVersion "24.0.0"
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
     buildTypes {
         release {
@@ -56,6 +54,7 @@ configurations {
     all*.exclude group: 'commons-logging', module: 'commons-logging'
 }
 
+
 uploadArchives {
     repositories {
         mavenDeployer {
@@ -65,8 +64,8 @@ uploadArchives {
 }
 
 bintray {
-    user = 'arogerio'
-    key = 'b121f9d67c978b028e52e5b8812253019bd5aa7c'
+    user = 'araraujo'
+    key = 'e0c6c9b7841b231ca94e4ca83a84bb46c70f06cc'
     pkg {
         repo = 'maven'
         name = 'stemcell'
@@ -82,6 +81,3 @@ bintray {
     }
     configurations = ['archives']
 }
-
-
-
